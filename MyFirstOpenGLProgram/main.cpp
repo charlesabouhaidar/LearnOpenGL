@@ -47,8 +47,14 @@ int main(){
     // checks at start of each loop if GLFW has been instructed to close
     while(!glfwWindowShouldClose(window)){
         
-        //without this line I'd get a flashing red window on Mac OS X
+        //without this next line I am getting a flashing red window on Mac OS X, it is used to to clear the color buffer
         glClear(GL_COLOR_BUFFER_BIT);
+        
+        //specify color to clear the screen, in this case a green-blue color
+        glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+        
+        // check if user presses a key (escape)
+        processInput(window);
         
         // swap color buffer (large 2d buffer containing color values for each pixel in GLFW's window) used to output to the screen
         glfwSwapBuffers(window);
@@ -65,4 +71,11 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height){
     glViewport(0, 0, width, height);
 }
 
+// handle user pressing a key
+void processInput(GLFWwindow *window){
+    // take window as input together with key
+    if(glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS){
+        glfwSetWindowShouldClose(window, true);
+    }
+}
 
