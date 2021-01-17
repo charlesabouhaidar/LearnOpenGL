@@ -29,7 +29,6 @@
 
 /* Begin PBXFileReference section */
 		56A43B6525B3C8F400A01EFE /* hello_triangle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = hello_triangle.cpp; sourceTree = "<group>"; };
-		56A43B6A25B3DC8400A01EFE /* Notes.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Notes.rtf; sourceTree = "<group>"; };
 		56FB785E25B3289F008755C6 /* MyFirstOpenGLProgram */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MyFirstOpenGLProgram; sourceTree = BUILT_PRODUCTS_DIR; };
 		56FB786125B3289F008755C6 /* hello_world.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = hello_world.cpp; sourceTree = "<group>"; };
 		56FB786A25B328AC008755C6 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
@@ -65,7 +64,6 @@
 			isa = PBXGroup;
 			children = (
 				56A43B6525B3C8F400A01EFE /* hello_triangle.cpp */,
-				56A43B6A25B3DC8400A01EFE /* Notes.rtf */,
 			);
 			path = "2- Hello Triangle";
 			sourceTree = "<group>";
