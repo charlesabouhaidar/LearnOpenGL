@@ -1,0 +1,63 @@
+/*
+ * Everything in OpenGL is in 3D, but your screen is a 2D array of pixels (duh), so you need to transform 3D coordinates onto a Cartesian plan
+ 
+ * Transforming 3D coordinates to 2D pixels is managed by the GRAPHICS PIPELINE
+ 
+ * Shaders: programs run on the GPU for each step of the pipeline
+    Written in the OpenGL Shading Language (GLSL)
+ 
+ * Overview of how the pipeline works when trying to draw a triangle:
+ 
+    1) Input set of 3x 3D coordinates, which is a collection of vertices
+       Vertex: collection of data per 3D coordinate, said data is represented using vertex attributes which contain in this case x, y, z, and a colour value
+    
+    2) Vertex shader: takes as input a single vertex to transform 3D coordinates into different 3D coordinates and do some basic processing on the vertex's attributes
+ 
+    3) Primitive assembly stage takes as input all the vertices from the vertex shader that form a primitive (which is a shape, such as a GL_TRIANGLES, GL_LINE_STRIP...)
+        
+        Output is passed to the GEOMETRY SHADER
+    
+    4) Geometry shader: takes as input a collection of vertices that form a primitive, and has the ability to form new/other primitives with those vertices(example of a second triangle within the first triangle on page 26)
+ 
+    5) Rasterization: takes the output of the geometry shader, and maps the resulting primitive(s) to the corresponding pixels on the final screen which results in fragments for the fragment shader to use.
+        
+ 
+    6) Clipping: discards all fragments that are outside your view to increase performance, and it is run before running the fragment shaders
+ 
+    7) Fragment shaders: calculate final colour of a pixel. It contains the data about the 3D scene (lights, light colour, shadows...), and uses that data to calculate the final colour of a pixel
+ 
+    8) Alpha test: stage that checks whether a resulting fragment should be in front/behind of other objects, and also checks alpha values (defines opacity), then "blends" the objects accordingly.
+ 
+ * MINIMUM REQUIREMENTS:
+    Define:
+        - Vertex
+        - Fragment shader
+
+ * OpenGL only processes coordinates between -1.0 and 1.0 for x,y z, called the normalized device coordinates. Any coordinate outside of that range will be clipped.
+
+ *  NDC coordinates will be transformed to SCREEN-SPACE coordinates via the VIEWPORT TRANSFORM using data provided with glViewport, which will then be transformed to fragments as inputs to your fragment shader
+
+ * Next step: sending vertex data as input to the vertex shader, by creating memory on the GPU where we:
+    
+     - Store the vertex data
+     - Configure how openGL should interpret the memory
+     - Specify how to send the data to the graphics card
+     
+     This memory is managed by the vertex buffer objects or VBO, which can store a large number of vertices in the GPU'S memory
+
+* GL_ARRAY_BUFFER: buffer object for a VBO. 
+
+* glBindBuffer(BUFFER_TYPE, BUFFER): bind a buffer type to a previously defined buffer
+
+* any buffer calls we make on the GL_ARRAY_BUFFER target will be used to create the bounded buffer
+
+* glBufferData(BUFFER_TYPE, size of data, data, HOW_TO_MANAGE_DATA)
+
+	3 different ways to manage the data:
+		- GL_STREAM_DRAW: data is set only once and used by the GPU at most a few times
+		- GL_STATIC_DRAW: data is set once and used multiple times
+		- GL_DYNAMIC_DRAW: data is changed and used multiple times
+
+
+ 
+ */

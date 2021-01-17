@@ -6,7 +6,6 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void processInput(GLFWwindow *window);
 
 int main(){
-    
     // initialize GLFW
     glfwInit();
     
@@ -39,8 +38,6 @@ int main(){
         std::cout << "Failed to initialize GLAD" << std::endl;
         return -1;
     }
-        
-    void framebuffer_size_callback(GLFWwindow* window, int wiedth, int height);
     
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
     

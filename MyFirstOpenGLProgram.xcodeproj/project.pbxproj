@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		56FB786225B3289F008755C6 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 56FB786125B3289F008755C6 /* main.cpp */; };
+		56A43B6625B3C8F400A01EFE /* hello_triangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 56A43B6525B3C8F400A01EFE /* hello_triangle.cpp */; };
+		56FB786225B3289F008755C6 /* hello_world.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 56FB786125B3289F008755C6 /* hello_world.cpp */; };
 		56FB786B25B328AC008755C6 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56FB786A25B328AC008755C6 /* OpenGL.framework */; };
 		56FB786D25B3290C008755C6 /* libglfw.3.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 56FB786C25B3290C008755C6 /* libglfw.3.3.dylib */; };
 		56FB786F25B32939008755C6 /* libGLEW.2.2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 56FB786E25B32939008755C6 /* libGLEW.2.2.0.dylib */; };
@@ -27,8 +28,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		56A43B6525B3C8F400A01EFE /* hello_triangle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = hello_triangle.cpp; sourceTree = "<group>"; };
+		56A43B6A25B3DC8400A01EFE /* Notes.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Notes.rtf; sourceTree = "<group>"; };
 		56FB785E25B3289F008755C6 /* MyFirstOpenGLProgram */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MyFirstOpenGLProgram; sourceTree = BUILT_PRODUCTS_DIR; };
-		56FB786125B3289F008755C6 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		56FB786125B3289F008755C6 /* hello_world.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = hello_world.cpp; sourceTree = "<group>"; };
 		56FB786A25B328AC008755C6 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		56FB786C25B3290C008755C6 /* libglfw.3.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.3.dylib; path = ../../../../usr/local/Cellar/glfw/3.3.2/lib/libglfw.3.3.dylib; sourceTree = "<group>"; };
 		56FB786E25B32939008755C6 /* libGLEW.2.2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.2.2.0.dylib; path = ../../../../usr/local/Cellar/glew/2.2.0_1/lib/libGLEW.2.2.0.dylib; sourceTree = "<group>"; };
@@ -50,6 +53,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		56A43B6025B3A72A00A01EFE /* 1- Hello World */ = {
+			isa = PBXGroup;
+			children = (
+				56FB786125B3289F008755C6 /* hello_world.cpp */,
+			);
+			path = "1- Hello World";
+			sourceTree = "<group>";
+		};
+		56A43B6225B3C8B600A01EFE /* 2- Hello Triangle */ = {
+			isa = PBXGroup;
+			children = (
+				56A43B6525B3C8F400A01EFE /* hello_triangle.cpp */,
+				56A43B6A25B3DC8400A01EFE /* Notes.rtf */,
+			);
+			path = "2- Hello Triangle";
+			sourceTree = "<group>";
+		};
 		56FB785525B3289E008755C6 = {
 			isa = PBXGroup;
 			children = (
@@ -70,8 +90,9 @@
 		56FB786025B3289F008755C6 /* MyFirstOpenGLProgram */ = {
 			isa = PBXGroup;
 			children = (
+				56A43B6025B3A72A00A01EFE /* 1- Hello World */,
+				56A43B6225B3C8B600A01EFE /* 2- Hello Triangle */,
 				56FB787625B38DF3008755C6 /* glad.c */,
-				56FB786125B3289F008755C6 /* main.cpp */,
 				56FB787A25B395CB008755C6 /* .gitignore */,
 			);
 			path = MyFirstOpenGLProgram;
@@ -143,7 +164,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56FB786225B3289F008755C6 /* main.cpp in Sources */,
+				56FB786225B3289F008755C6 /* hello_world.cpp in Sources */,
+				56A43B6625B3C8F400A01EFE /* hello_triangle.cpp in Sources */,
 				56FB787725B38DF3008755C6 /* glad.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
