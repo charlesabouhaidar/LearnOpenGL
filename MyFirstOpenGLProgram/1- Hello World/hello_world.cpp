@@ -76,3 +76,4 @@ void processInput(GLFWwindow *window){
     }
 }
 
+

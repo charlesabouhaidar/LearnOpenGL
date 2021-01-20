@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		56A43B6625B3C8F400A01EFE /* hello_triangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 56A43B6525B3C8F400A01EFE /* hello_triangle.cpp */; };
-		56FB786225B3289F008755C6 /* hello_world.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 56FB786125B3289F008755C6 /* hello_world.cpp */; };
 		56FB786B25B328AC008755C6 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56FB786A25B328AC008755C6 /* OpenGL.framework */; };
 		56FB786D25B3290C008755C6 /* libglfw.3.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 56FB786C25B3290C008755C6 /* libglfw.3.3.dylib */; };
 		56FB786F25B32939008755C6 /* libGLEW.2.2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 56FB786E25B32939008755C6 /* libGLEW.2.2.0.dylib */; };
@@ -162,7 +161,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56FB786225B3289F008755C6 /* hello_world.cpp in Sources */,
 				56A43B6625B3C8F400A01EFE /* hello_triangle.cpp in Sources */,
 				56FB787725B38DF3008755C6 /* glad.c in Sources */,
 			);

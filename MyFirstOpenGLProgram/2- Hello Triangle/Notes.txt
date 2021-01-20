@@ -58,6 +58,15 @@
 		- GL_STATIC_DRAW: data is set once and used multiple times
 		- GL_DYNAMIC_DRAW: data is changed and used multiple times
 
+* Vertex buffer format:
+	- Position data is stored as 32-bit floating point values
+	- Each position is composed of 3 of those values (x, y, z)
+	- No space between each set of 3 values --> tightly packed in the array
+	- First value in the data is at the beginning of the buffer
+
+* glVertexAttribPointer(location_of_vertex_attribute, size_of_vertex_attribute, type_of_data, data_normalized_boolean, stride, offset): tell OpenGL how to interpret vertex data per vertex attribute
+
+* 
 
  
  */
